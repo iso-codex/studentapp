@@ -1,0 +1,11 @@
+Course,CourseID,Details,Credits,Duration
+Math,MATH101,Algebra,4,16 weeks
+English,ENG202,Literature,3,14 weeks
+History,HIST303,World History,3,15 weeks
+Biology,BIO404,Cellular Biology,4,16 weeks
+Computer Science,COMP505,Data Structures,3,13 weeks
+Psychology,PSYC606,Abnormal Psychology,4,14 weeks
+Chemistry,CHEM707,Organic Chemistry,5,15 weeks
+Art,ART808,Painting,3,12 weeks
+Economics,ECON909,Microeconomics,4,15 weeks
+Physics,PHYS1010,Mechanics,3,16 weeks
