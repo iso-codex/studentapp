@@ -4,24 +4,32 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ReadCourseFile {
-	public static void main(String[] args) {
-		
-		String file = "C:\\Users\\Iso-Codex\\Downloads\\coursedataset.csv";
+public class CourseDao {
+	
+	private String file = "C:\\Users\\Iso-Codex\\Downloads\\coursedataset.csv";
+
+
+	public Course[] readCourses() throws Exception {
+		Course[] allCourses = new Course[10];
 		BufferedReader reader = null;
 		String line = "";
 		
+		
 		try {
 			reader = new BufferedReader(new FileReader(file));
+			int index = 0;
+			line = reader.readLine();
 			while((line = reader.readLine()) != null) {
 				
 				String[] row = line.split(",");
-				
-				for(String index : row) {
-					System.out.printf("%-10s", index);
-				}
-				System.out.println();
+				allCourses [index] = new Course(row[1], row[0]);
+				index++;
+//				for(String text : row) {
+//					System.out.printf("%-10s", text);
+//				}
+//				System.out.println();
 			}
+			return allCourses;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -29,10 +37,16 @@ public class ReadCourseFile {
 		finally {
 			try {
 				reader.close();
+				return allCourses;
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				return allCourses;
 			}
 		}
+		
 	}
+	
+	
 }
+
