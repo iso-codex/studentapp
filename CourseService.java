@@ -10,13 +10,18 @@ public class CourseService {
 	}
 	
 	public Course findCourseById(String id) throws Exception {
-		// Loop through the courses array
-		
-		// Check to see if the current course's ID matches the requested ID
-		
-		// If so return current course
-		return null;
+	    // Loop through the courses array
+	    for (Course course : courses) {
+	        // Check to see if the current course's ID matches the requested ID
+	        if (course.getId().equals(id)) {
+	            // If so, return the current course
+	            return course;
+	        }
+	    }
+	    // If no course with the requested ID is found, return null
+	    return null;
 	}
+
 	
 	public Course[] returnAllCourses() throws Exception {
 		return dao.readCourses();
