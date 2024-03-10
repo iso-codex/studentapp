@@ -1,4 +1,4 @@
-package studentapp;
+package studentapp.course;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

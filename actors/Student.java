@@ -1,7 +1,9 @@
-package studentapp;
+package studentapp.actors;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import studentapp.course.Course;
 
 public class Student {
     private String firstName;

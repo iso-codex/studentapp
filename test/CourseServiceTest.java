@@ -1,7 +1,7 @@
 package studentapp.test;
 
-import studentapp.Course;
-import studentapp.CourseService;
+import studentapp.course.Course;
+import studentapp.course.CourseService;
 
 public class CourseServiceTest {
 	

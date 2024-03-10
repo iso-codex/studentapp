@@ -1,4 +1,4 @@
-package studentapp;
+package studentapp.course;
 
 public class Course {
     private String id;

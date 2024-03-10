@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import studentapp.actors.Student;
+import studentapp.course.Course;
+
 public class RegistrationMethods {
     public static void main(String[] args) {
         // Create some courses
