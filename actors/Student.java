@@ -5,12 +5,21 @@ import java.util.List;
 import studentapp.course.Course;
 
 public class Student extends Actor {
-    private List<Course> courses;
 
-    public Student(String firstName, String lastName, String contactInfo, String role) {
-        super(firstName, lastName, contactInfo, role);
-        this.courses = new ArrayList<>();
-    }
+ 
+
+	private List<Course> courses;
+
+//    public Student(ContactInfo contactInfo, Role role) {
+//
+//        ContactInfo.contactInfo = contactInfo;
+//        this.courses = new ArrayList<>();
+//    }
+	
+	   public Student(String contactInfo, String role) {
+			super(contactInfo, role);
+			// TODO Auto-generated constructor stub
+		}
 
     public List<Course> getCourses() {
         return courses;
@@ -22,7 +31,7 @@ public class Student extends Actor {
 
     public void registerForCourse(Course course) {
         courses.add(course);
-        System.out.println(getFirstName() + " " + getLastName() + " registered for the course: " + course.getCourseName());
+        System.out.println(" registered for the course: " + course.getCourseName());
     }
 
     @Override
