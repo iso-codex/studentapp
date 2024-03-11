@@ -7,7 +7,7 @@ import studentapp.course.Course;
 public class Student extends Actor {
     private List<Course> courses;
 
-    public Student(String firstName, String lastName, ContactInfo contactInfo, Role role) {
+    public Student(String firstName, String lastName, String contactInfo, String role) {
         super(firstName, lastName, contactInfo, role);
         this.courses = new ArrayList<>();
     }

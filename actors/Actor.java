@@ -7,11 +7,11 @@ import studentapp.course.Course;
 public class Actor {
     private String firstName;
     private String lastName;
-    private ContactInfo contactInfo;
-    private Role role;
+    private String contactInfo;
+    private String role;
     private List<Course> courses;
 
-    public Actor(String firstName, String lastName, ContactInfo contactInfo, Role role) {
+    public Actor(String firstName, String lastName, String contactInfo, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.contactInfo = contactInfo;
@@ -27,19 +27,19 @@ public class Actor {
         return lastName;
     }
 
-    public ContactInfo getContactInfo() {
+    public String getContactInfo() {
         return contactInfo;
     }
 
-    public void setContactInfo(ContactInfo contactInfo) {
+    public void setContactInfo(String contactInfo) {
         this.contactInfo = contactInfo;
     }
 
-    public Role getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
