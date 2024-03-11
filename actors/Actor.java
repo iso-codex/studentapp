@@ -4,14 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 import studentapp.course.Course;
 
-public class Actor extends Student {
+public class Actor {
+    private String firstName;
+    private String lastName;
     private ContactInfo contactInfo;
     private Role role;
+    private List<Course> courses;
 
     public Actor(String firstName, String lastName, ContactInfo contactInfo, Role role) {
-        super(firstName, lastName); // Call the constructor of the superclass (Student)
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.contactInfo = contactInfo;
         this.role = role;
+        this.courses = new ArrayList<>();
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public ContactInfo getContactInfo() {
@@ -30,11 +43,23 @@ public class Actor extends Student {
         this.role = role;
     }
 
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void registerForCourse(Course course) {
+        courses.add(course);
+        System.out.println(firstName + " " + lastName + " registered for the course: " + course.getCourseName());
+    }
+
     @Override
     public String toString() {
         return "Actor{" +
-                "contactInfo=" + contactInfo +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", contactInfo=" + contactInfo +
                 ", role=" + role +
+                ", courses=" + courses +
                 '}';
     }
 }
