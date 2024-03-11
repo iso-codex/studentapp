@@ -8,7 +8,7 @@ import java.util.List;
 import studentapp.actors.Actor;
 
 public class ActorDao {
-    private static final String CSV_FILE_PATH = "Actors.csv";
+    private static final String CSV_FILE_PATH = "src/Actors.csv";
 
     public List<Actor> readActors() {
         List<Actor> actors = new ArrayList<>();
@@ -18,10 +18,10 @@ public class ActorDao {
                 String[] data = line.split(",");
                 if (data.length >= 4) { // Ensure there are at least four fields (firstName, lastName, contactInfo, role)
                     String firstName = data[0];
-                    String lastName = data[1];
+                    String role = data[1];
                    
                     // You may need to parse additional fields here if needed
-                    Actor actor = new Actor(firstName, lastName, null, null); // contactInfo and role are initialized as null
+                    Actor actor = new Actor(firstName, role, null, null); // contactInfo and role are initialized as null
                     actors.add(actor);
                 }
             }

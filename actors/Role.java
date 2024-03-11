@@ -3,7 +3,7 @@ package studentapp.actors;
 
 public class Role {
 	public enum Roles {
-		student, faculty, system_Admin
+		STUDENT, FACULTY, SYSTEM_ADMIN
 	}
 	// Instance Variable
 	Roles role;
@@ -16,15 +16,15 @@ public class Role {
 	
 	public void giveAccessRole() {
 		switch(role) {
-		case student:
+		case STUDENT:
 			System.out.println("User is a Student...");
 			break;
 			
-		case faculty:
+		case FACULTY:
 			System.out.println("User is a Faculty memeber...");
 			break;
 			
-		case system_Admin: 
+		case SYSTEM_ADMIN: 
 			System.out.println("User is an Admin...");
 			break;
 			
