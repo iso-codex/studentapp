@@ -5,15 +5,21 @@ import java.util.List;
 import studentapp.course.Course;
 
 public class Actor {
+	private String lastName;
     private String contactInfo;
     private String role;
 
 
-    public Actor(String contactInfo, String role) {
+    public Actor(String lastName, String contactInfo, String role) {
+    	this.lastName = lastName;
         this.contactInfo = contactInfo;
         this.role = role;
     }
 
+    public String getLastName() {
+    	return lastName;
+    }
+    
     public String getContactInfo() {
         return contactInfo;
     }

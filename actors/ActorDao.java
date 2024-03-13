@@ -18,12 +18,13 @@ public class ActorDao {
                 String[] data = line.split(",");
                 if (data.length >= 4) { // Ensure there are at least four fields (firstName, lastName, contactInfo, role)
 //                    String firstName = data[3];
-//                    String lastName = data[4];
+                    
                     String contactInfo = data[10];
                     String role = data[1];
                     
+                    
                     // You may need to parse additional fields here if needed
-                    Actor actor = new Actor( contactInfo, role);
+                    Actor actor = new Actor(null, contactInfo, role);
                     actors.add(actor);
                 }
             }

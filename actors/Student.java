@@ -16,8 +16,8 @@ public class Student extends Actor {
 //        this.courses = new ArrayList<>();
 //    }
 	
-	   public Student(String contactInfo, String role) {
-			super(contactInfo, role);
+	   public Student(String contactInfo, String role, String lastName) {
+			super(lastName, contactInfo, role);
 			// TODO Auto-generated constructor stub
 		}
 
