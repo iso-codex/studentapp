@@ -1,17 +1,17 @@
 package studentapp.course;
 
 public class Course {
-    private String id;
+    private int id;
     private String name;
 //    private double courseCost;
 
-    public Course(String id, String name) {
-        this.id = id;
+    public Course(String row, String name) {
+        this.id = row;
         this.name = name;
 //        this.courseCost = courseCost;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
