@@ -1,30 +1,24 @@
 package studentapp.actors;
 
-import java.util.ArrayList;
-import java.util.List;
-import studentapp.course.Course;
-
 public class Actor {
-	private String lastName;
-    private String contactInfo;
-    private String role;
+	private int id;
+	private String role;
+	private ContactInfo contactInfo;
+    private String password;
 
 
-    public Actor(String lastName, String contactInfo, String role) {
-    	this.lastName = lastName;
+    public Actor(int id, String role, ContactInfo contactInfo, String password) {
+    	this.id = id;
         this.contactInfo = contactInfo;
         this.role = role;
-    }
-
-    public String getLastName() {
-    	return lastName;
+        this.password = password;
     }
     
-    public String getContactInfo() {
-        return contactInfo;
+    public ContactInfo getContactInfo() {
+        return this.contactInfo;
     }
 
-    public void setContactInfo(String contactInfo) {
+    public void setContactInfo(ContactInfo contactInfo) {
         this.contactInfo = contactInfo;
     }
 
@@ -36,7 +30,23 @@ public class Actor {
         this.role = role;
     }
 
-    @Override
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
     public String toString() {
         return "Actor{" +
 

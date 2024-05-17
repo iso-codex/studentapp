@@ -1,0 +1,5 @@
+﻿ID,ROLE,EMAIL,FIRST_NAME,LAST_NAME,ADDRESS1,ADDRESS2,CITY,STATE,ZIP,PHONE,PASSWORD
+1,STUDENT,pGyan@univ.com,Prince,Gyan,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,This1sMyPassword123!
+2,STUDENT,aBoateng123@univ.com,Alexander,Boateng,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,This1sMyPassword456#
+3,FACULTY,zAnsah@univ.com,Zima,Ansah,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,This1sMyPassword789%
+4,STAFF,jDoe@univ.com,Jonathan,Doe,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,Placeholder,This1sMyPassword555$

@@ -22,7 +22,7 @@ public class CourseServiceTest {
 		 System.out.println("Testing Return all courses\n");
 		 Course[] courses = svc.returnAllCourses();
 		 for(Course c: courses) {
-			 System.out.println(c.getId() + " " + c.getCourseName());
+			 System.out.println(c.getId() + " " + c.getName());
 			 
 		 }
 		 
@@ -31,7 +31,7 @@ public class CourseServiceTest {
 	 }
 	 
 	 private static boolean testFindByID(CourseService svc) throws Exception {
-		 String courseID = "Science";
+		 int courseID = 3;
 		 Course foundCourse = null;
 		 System.out.println("\n\nTesting CourseService.findByID");
 		 

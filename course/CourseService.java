@@ -9,11 +9,11 @@ public class CourseService {
 		this.intitializeCourses();
 	}
 	
-	public Course findCourseById(String id) throws Exception {
+	public Course findCourseById(int id) throws Exception {
 	    // Loop through the courses array
 	    for (Course course : courses) {
 	        // Check to see if the current course's ID matches the requested ID
-	        if (course.getId().equals(id)) {
+	        if (course.getId() == id) {
 	            // If so, return the current course
 	            return course;
 	        }

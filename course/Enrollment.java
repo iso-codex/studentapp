@@ -1,23 +1,31 @@
 package studentapp.course;
 
 public class Enrollment {
-	private int studentID;
-	private int courseID;
+	private int studentId;
+	private int courseId;
 	
-	public Enrollment(int studentID, Course id) {
-		this.studentID = studentID;
-		this.courseID = courseID;
+	public Enrollment(int studentId, int courseId) {
+		this.studentId = studentId;
+		this.courseId = courseId;
 	}
 
-	public int getStudentID() {
-		return studentID;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	public int getCourseID() {
-		return courseID;
+	public int getCourseId() {
+		return courseId;
 	}
 	
-	 @Override
+	 public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
+	}
+
+	@Override
 	    public String toString() {
 	        return null;
 	    }

@@ -1,13 +1,14 @@
-package studentapp.actors;
+package studentapp.students;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import studentapp.actors.Actor;
+import studentapp.actors.ContactInfo;
 import studentapp.course.Course;
 
 public class Student extends Actor {
-
- 
-
+	
 	private List<Course> courses;
 
 //    public Student(ContactInfo contactInfo, Role role) {
@@ -16,8 +17,8 @@ public class Student extends Actor {
 //        this.courses = new ArrayList<>();
 //    }
 	
-	   public Student(String contactInfo, String role, String lastName) {
-			super(lastName, contactInfo, role);
+	   public Student(int id, String role, ContactInfo contactInfo, String password) {
+			super(id, role, contactInfo, password);
 			// TODO Auto-generated constructor stub
 		}
 
@@ -30,8 +31,13 @@ public class Student extends Actor {
     }
 
     public void registerForCourse(Course course) {
+    	
+    	if(courses == null) {
+    		courses = new ArrayList<Course>();
+    	}
+    	
         courses.add(course);
-        System.out.println(" registered for the course: " + course.getCourseName());
+        System.out.println(" registered for the course: " + course.getName());
     }
 
     @Override

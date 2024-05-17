@@ -5,26 +5,26 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import studentapp.actors.Actor;
 
 public class ActorDao {
-    private static final String CSV_FILE_PATH = "src/Actors.csv";
+//    private static final String CSV_FILE_PATH = "src/Actors.csv";
+    private static final String CSV_FILE_PATH = "/Users/kofibonney/Documents/src/internship/studentapp/Actors.csv";
 
     public List<Actor> readActors() {
         List<Actor> actors = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
             String line;
+            line = reader.readLine();
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
-                if (data.length >= 4) { // Ensure there are at least four fields (firstName, lastName, contactInfo, role)
-//                    String firstName = data[3];
+                if (data.length >= 11) { // Ensure there are at least four fields (firstName, lastName, contactInfo, role)
                     
-                    String contactInfo = data[10];
+                	ContactInfo contactInfo = new ContactInfo(data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[2]);
                     String role = data[1];
+                    int id = Integer.parseInt(data[0]);
+                    String password = data[11];
                     
-                    
-                    // You may need to parse additional fields here if needed
-                    Actor actor = new Actor(null, contactInfo, role);
+                    Actor actor = new Actor(id, role, contactInfo, password);
                     actors.add(actor);
                 }
             }
